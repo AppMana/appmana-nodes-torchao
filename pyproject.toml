@@ -1,0 +1,16 @@
+[build-system]
+# Include torch in build-requires so it's available during setup.py execution
+requires = [
+  "setuptools>=42.0.0",
+  "wheel",
+  "torch",
+  "numpy",
+]
+build-backend = "setuptools.build_meta"
+
+# Minimal project metadata - most will come from setup.py
+[project]
+name = "torchao"
+dynamic = ["version", "dependencies", "description", "readme", "optional-dependencies"]
+
+# The rest of the metadata will be read from setup.py
